@@ -12,7 +12,7 @@ This example assumes that your webcam is compatible with Video4Linux2 and appear
 `node websocket-relay.js supersecret 8081 8082`
 
 3) Open the streaming website in your browser. 
-`http://192.168.[...]/view-stream.html`
+`http://192.168.[...]`
 
 4) In a second terminal window, start ffmpeg to capture the webcam video and send it to the Websocket relay. Provide the password and port (from step 7) in the destination URL:
 ```
