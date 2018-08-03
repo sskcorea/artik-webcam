@@ -1,0 +1,25 @@
+{
+  "name": "artik-webcam",
+  "version": "1.0.0",
+  "description": "artik webcam",
+  "main": "websocket-relay.js",
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "jsmpeg": "^1.0.0",
+    "ws": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node websocket-relay supersecret"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sskcorea/artik-webcam.git"
+  },
+  "author": "slki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sskcorea/artik-webcam/issues"
+  },
+  "homepage": "https://github.com/sskcorea/artik-webcam#readme"
+}
