@@ -1,4 +1,4 @@
-## Example Setup for Streaming: ARTIK Live Webcam
+## ARTIK Live Webcam
 
 For this example, ffmpeg and the WebSocket relay run on the same system. This allows you to view the stream in your local network, but not on the public internet.
 
