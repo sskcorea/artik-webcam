@@ -7,6 +7,7 @@
 var fs = require('fs'),
 	http = require('http'),
 	WebSocket = require('ws');
+	express = require("express");
 
 if (process.argv.length < 3) {
 	console.log(
@@ -85,11 +86,14 @@ var streamServer = http.createServer( function(request, response) {
 	}
 }).listen(STREAM_PORT);
 
-//create a server object:
-http.createServer(function (req, res) {
-  res.write('Hello World!'); //write a response to the client
-  res.end(); //end the response
-}).listen(80); //the server object listens on port 8080
+const app = express();
+app.use(express.static('.'))
+app.get('/',function(req,res){
+	res.sendFile('index.html');
+});
+
+app.listen(80);
 
 console.log('Listening for incomming MPEG-TS Stream on http://127.0.0.1:'+STREAM_PORT+'/<secret>');
 console.log('Awaiting WebSocket connections on ws://127.0.0.1:'+WEBSOCKET_PORT+'/');
+console.log('Streaming Video on ws://127.0.0.1');
